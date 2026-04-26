@@ -3,9 +3,9 @@ def canJump(nums):
     for i in range(len(nums)):
         if i > max_reach:
             return False
-        max_reach = max(max_reach, i+nums[i])
+        max_reach = max(max_reach, i+nums[i]) #update reach
 
-        if max_reach>=len(nums)-1:
+        if max_reach>=len(nums)-1: #reached end
             return True
     return True
    
